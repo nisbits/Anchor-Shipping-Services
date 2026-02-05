@@ -1,0 +1,198 @@
+.why-choose-us {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.why-choose-us h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.why-choose-us .section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.why-choose-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.about-text h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-text p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.truck-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.reason-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  border-top: 3px solid #667eea;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-top-color: #764ba2;
+}
+
+.reason-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.reason-card h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.reason-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .why-choose-content {
+    gap: 40px;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 50px 0;
+  }
+
+  .why-choose-us h2 {
+    font-size: 32px;
+  }
+
+  .why-choose-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-text h3 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .reason-card {
+    padding: 20px;
+  }
+
+  .reason-icon {
+    font-size: 36px;
+  }
+
+  .reason-card h4 {
+    font-size: 16px;
+  }
+
+  .reason-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us {
+    padding: 30px 0;
+  }
+
+  .why-choose-us h2 {
+    font-size: 24px;
+  }
+
+  .why-choose-content {
+    gap: 30px;
+  }
+
+  .about-text h3 {
+    font-size: 20px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .reason-card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .reason-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .reason-card h4 {
+    font-size: 15px;
+  }
+
+  .reason-card p {
+    font-size: 12px;
+  }
+}
