@@ -1,50 +1,56 @@
+import carImage from '../assets/car.png'
+import bikeImage from '../assets/bike.png'
+import goodsImage from '../assets/goods.png'
+import heavyImage from '../assets/heavy.png'
+import industrialImage from '../assets/industrailequipments.png'
+import panIndiaImage from '../assets/panindia.png'
 import './styles/Services.css'
 
 export default function Services() {
   const services = [
     {
       id: 1,
-      icon: '🚗',
+      icon: <img src={carImage} alt="Car Transport" />,
       title: 'Car Transport',
-      description: 'Safe and secure transportation of automobiles to any destination'
+      description: 'Safe & secure car transportation across all Indian states with GPS tracking and insurance coverage'
     },
     {
       id: 2,
-      icon: '🏍️',
-      title: 'Bike & Motorcycle Transport',
-      description: 'Professional handling and transport of bikes and motorcycles'
+      icon: <img src={bikeImage} alt="Bike Transport" />,
+      title: 'Bike Transport',
+      description: 'Professional bike and motorcycle transport with special packaging for inter-city moves'
     },
     {
       id: 3,
-      icon: '📦',
-      title: 'Material Hauling',
-      description: 'Efficient transportation of construction materials and bulk cargo'
+      icon: <img src={goodsImage} alt="Goods Transport" />,
+      title: 'Goods Transport',
+      description: 'Reliable goods and parcel delivery service for businesses and individuals across India'
     },
     {
       id: 4,
-      icon: '🛣️',
-      title: 'Heavy Equipment Transport',
-      description: 'Specialized transport for machinery and heavy industrial equipment'
+      icon: <img src={heavyImage} alt="Heavy Vehicle Transport" />,
+      title: 'Heavy Vehicle Transport',
+      description: 'Specialized transport for trucks, buses and commercial vehicles with expert handling'
     },
     {
       id: 5,
-      icon: '⏰',
-      title: '24/7 Availability',
-      description: 'Round-the-clock logistics support for urgent shipments'
+      icon: <img src={industrialImage} alt="Industrial Equipment" />,
+      title: 'Industrial Equipment',
+      description: 'Heavy machinery and industrial equipment transport with proper permits and safety measures'
     },
     {
       id: 6,
-      icon: '📍',
-      title: 'Pan-India Delivery',
-      description: 'Nationwide coverage for all your transportation needs'
+      icon: <img src={panIndiaImage} alt="Pan India Network" />,
+      title: 'Pan India Network',
+      description: 'Extensive network covering all major cities, towns and villages across India'
     }
   ]
 
   return (
     <section id="services" className="services">
       <div className="container">
-        <h2>Our Services</h2>
-        <p className="section-subtitle">Comprehensive goods and vehicle transportation solutions</p>
+        <h2>Our Logistics Services</h2>
+        <p className="section-subtitle">Comprehensive transportation solutions tailored for Indian businesses and individuals</p>
         <div className="services-grid">
           {services.map(service => (
             <div key={service.id} className="service-card">

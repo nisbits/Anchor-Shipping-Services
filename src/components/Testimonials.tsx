@@ -10,45 +10,51 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: 'John Smith',
-      company: 'ABC Manufacturing',
-      text: 'Excellent service! Our goods arrived on time and in perfect condition. The team was professional and courteous throughout.',
-      rating: 5
+      name: 'Rajesh Kumar',
+      company: 'Delhi Manufacturing Co.',
+      text: 'Excellent service! My goods arrived on time and in perfect condition. The team was very professional and helpful.',
+      rating: 5,
+      location: 'Delhi NCR'
     },
     {
       id: 2,
-      name: 'Sarah Johnson',
-      company: 'Tech Solutions Ltd',
-      text: 'Reliable and affordable transportation service. We have been using them for our monthly shipments and never disappointed.',
-      rating: 5
+      name: 'Priya Sharma',
+      company: 'Mumbai Tech Solutions',
+      text: 'Reliable and affordable service. We use them for our monthly shipments across Maharashtra and never disappointed.',
+      rating: 5,
+      location: 'Mumbai'
     },
     {
       id: 3,
-      name: 'Michael Chen',
-      company: 'Automotive Supplies Co',
-      text: 'Great experience! The tracking system is very helpful and the drivers are careful with the cargo.',
-      rating: 4
+      name: 'Amit Patel',
+      company: 'Ahmedabad Automotive',
+      text: 'Great experience! The GPS tracking system is very helpful and drivers handle vehicles with utmost care.',
+      rating: 5,
+      location: 'Gujarat'
     },
     {
       id: 4,
-      name: 'Emma Williams',
-      company: 'Retail Express',
-      text: 'Fast delivery, competitive pricing, and excellent customer support. Highly recommended for all shipping needs.',
-      rating: 5
+      name: 'Sneha Reddy',
+      company: 'Bangalore Retail Express',
+      text: 'Fast delivery, competitive pricing, and excellent customer support. Best logistics partner in South India!',
+      rating: 5,
+      location: 'Bangalore'
     },
     {
       id: 5,
-      name: 'David Martinez',
-      company: 'Construction Materials',
-      text: 'Outstanding service for heavy equipment transport. They handled our machinery with utmost care.',
-      rating: 5
+      name: 'Vikram Singh',
+      company: 'Punjab Construction',
+      text: 'Outstanding service for heavy machinery transport. They handled our equipment with professional expertise.',
+      rating: 5,
+      location: 'Ludhiana'
     },
     {
       id: 6,
-      name: 'Lisa Anderson',
-      company: 'Logistics Partners',
-      text: 'Professional team, reliable schedules, and transparent communication. Perfect for bulk shipments.',
-      rating: 4
+      name: 'Anjali Nair',
+      company: 'Kerala Spices Export',
+      text: 'Professional team, reliable schedules, and transparent communication. Perfect for our export shipments.',
+      rating: 5,
+      location: 'Kochi'
     }
   ]
 
@@ -83,8 +89,8 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="testimonials">
       <div className="container">
-        <h2>What Our Customers Say</h2>
-        <p className="section-subtitle">Real feedback from satisfied clients - Drag to see more</p>
+        <h2>Customer Testimonials</h2>
+        <p className="section-subtitle">Real feedback from our satisfied Indian clients - Drag to see more</p>
         <div
           className="testimonials-carousel"
           ref={carouselRef}
@@ -100,6 +106,7 @@ export default function Testimonials() {
               <div className="testimonial-author">
                 <h4>{testimonial.name}</h4>
                 <p className="company">{testimonial.company}</p>
+                <p className="location">📍 {testimonial.location}</p>
               </div>
             </div>
           ))}

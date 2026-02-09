@@ -1,9 +1,15 @@
 .footer {
-  background-color: #1a1a1a;
+  background: linear-gradient(135deg, var(--text-dark), #1A1A2E);
   color: white;
-  padding: 60px 0 20px 0;
-  margin-top: 60px;
+  padding: 80px 0 30px 0;
+  margin-top: 0;
   width: 100%;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-content {
@@ -86,39 +92,46 @@
   }
 
   .footer-content {
+    grid-template-columns: 1fr;
     gap: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    text-align: center;
   }
 
-  .footer-section h3,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
   .footer-section h4 {
     font-size: 16px;
   }
 
-  .footer-section p,
-  .footer-section li {
-    font-size: 12px;
+  .footer-section p {
+    font-size: 14px;
+  }
+
+  .footer-section ul li {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 30px 0 10px 0;
+    padding: 40px 0 15px 0;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding-bottom: 20px;
   }
 
-  .footer-section h3,
+  .footer-section h3 {
+    font-size: 18px;
+  }
+
   .footer-section h4 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
-  .footer-section p,
   .footer-section li {
     font-size: 11px;
   }

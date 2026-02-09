@@ -1,8 +1,40 @@
+import { useEffect } from 'react'
 import './styles/Footer.css'
 
 export default function Footer() {
+  useEffect(() => {
+    const handleSmoothScroll = (e: Event) => {
+      const target = e.target as HTMLAnchorElement
+      if (target.hash) {
+        e.preventDefault()
+        const element = document.querySelector(target.hash)
+        if (element) {
+          const headerOffset = 0 // No offset needed since sections are full screen
+          const elementPosition = element.getBoundingClientRect().top
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }
+      }
+    }
+
+    const footerLinks = document.querySelectorAll('.footer a')
+    footerLinks.forEach(link => {
+      link.addEventListener('click', handleSmoothScroll)
+    })
+
+    return () => {
+      footerLinks.forEach(link => {
+        link.removeEventListener('click', handleSmoothScroll)
+      })
+    }
+  }, [])
+
   return (
-    <footer className="footer">
+    <footer id="contact" className="footer">
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
