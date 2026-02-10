@@ -46,11 +46,12 @@ export default function Header() {
             </div>
           </div>
           <nav className="nav-menu">
-            <a href="#services">Services</a>
-            <a href="#why-choose-us">About Us</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#map">Location</a>
-            <a href="#contact">Contact</a>
+            <a href="#hero" className="nav-link">Home</a>
+            <a href="#services" className="nav-link">Services</a>
+            <a href="#why-choose-us" className="nav-link">About Us</a>
+            <a href="#gallery" className="nav-link">Gallery</a>
+            <a href="#map" className="nav-link">Location</a>
+            <a href="#contact" className="nav-link">Contact</a>
           </nav>
         </div>
       </div>
