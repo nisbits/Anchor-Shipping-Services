@@ -50,6 +50,12 @@ export default function Services() {
       icon: <img src={houseImage} alt="Household Shifting" />,
       title: 'Household Shifting',
       description: 'Complete household relocation services with professional packing, loading, and unpacking for stress-free moving'
+    },
+    {
+      id: 8,
+      icon: <img src={goodsImage} alt="Local Shifting" />,
+      title: 'Local Shifting',
+      description: 'Quick and reliable local shifting services within city limits with affordable pricing and timely delivery'
     }
   ]
 

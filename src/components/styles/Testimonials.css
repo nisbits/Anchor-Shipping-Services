@@ -154,7 +154,7 @@
   
   .testimonial-image-section {
     width: 100%;
-    height: 200px;
+    height: 280px;
   }
   
   .testimonial-text-section {
@@ -168,16 +168,24 @@
     width: 100%;
   }
   
+  .testimonial-card-content {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
   .testimonial-image-section {
-    height: 180px;
+    width: 100%;
+    height: 350px;
   }
   
   .testimonial-text-section {
-    padding: 15px;
+    width: 100%;
+    padding: 20px;
   }
   
   .rating {
     font-size: 16px;
+    margin-bottom: 12px;
   }
   
   .testimonial-author h4 {
