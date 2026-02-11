@@ -12,7 +12,7 @@ export default function Map() {
             width="100%"
             height="400"
             style={{ border: 0, borderRadius: '8px' }}
-            allowFullScreen=""
+            allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

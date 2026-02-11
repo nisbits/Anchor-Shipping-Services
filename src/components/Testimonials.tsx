@@ -14,7 +14,8 @@ export default function Testimonials() {
       company: 'Delhi Manufacturing Co.',
       text: 'Excellent service! My goods arrived on time and in perfect condition. The team was very professional and helpful.',
       rating: 5,
-      location: 'Delhi NCR'
+      location: 'Delhi NCR',
+      image: '/src/assets/rajesh.png'
     },
     {
       id: 2,
@@ -22,7 +23,8 @@ export default function Testimonials() {
       company: 'Mumbai Tech Solutions',
       text: 'Reliable and affordable service. We use them for our monthly shipments across Maharashtra and never disappointed.',
       rating: 5,
-      location: 'Mumbai'
+      location: 'Mumbai',
+      image: '/src/assets/priya.png'
     },
     {
       id: 3,
@@ -30,7 +32,8 @@ export default function Testimonials() {
       company: 'Ahmedabad Automotive',
       text: 'Great experience! The GPS tracking system is very helpful and drivers handle vehicles with utmost care.',
       rating: 5,
-      location: 'Gujarat'
+      location: 'Gujarat',
+      image: '/src/assets/amit.png'
     },
     {
       id: 4,
@@ -38,7 +41,8 @@ export default function Testimonials() {
       company: 'Bangalore Retail Express',
       text: 'Fast delivery, competitive pricing, and excellent customer support. Best logistics partner in South India!',
       rating: 5,
-      location: 'Bangalore'
+      location: 'Bangalore',
+      image: '/src/assets/sneha.png'
     },
     {
       id: 5,
@@ -46,7 +50,8 @@ export default function Testimonials() {
       company: 'Punjab Construction',
       text: 'Outstanding service for heavy machinery transport. They handled our equipment with professional expertise.',
       rating: 5,
-      location: 'Ludhiana'
+      location: 'Ludhiana',
+      image: '/src/assets/vikram.png'
     },
     {
       id: 6,
@@ -54,7 +59,8 @@ export default function Testimonials() {
       company: 'Kerala Spices Export',
       text: 'Professional team, reliable schedules, and transparent communication. Perfect for our export shipments.',
       rating: 5,
-      location: 'Kochi'
+      location: 'Kochi',
+      image: '/src/assets/Anjali.png'
     }
   ]
 
@@ -101,12 +107,19 @@ export default function Testimonials() {
         >
           {testimonials.map(testimonial => (
             <div key={testimonial.id} className="testimonial-card">
-              <div className="rating">{renderStars(testimonial.rating)}</div>
-              <p className="testimonial-text">"{testimonial.text}"</p>
-              <div className="testimonial-author">
-                <h4>{testimonial.name}</h4>
-                <p className="company">{testimonial.company}</p>
-                <p className="location">📍 {testimonial.location}</p>
+              <div className="testimonial-card-content">
+                <div className="testimonial-image-section">
+                  <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+                </div>
+                <div className="testimonial-text-section">
+                  <div className="rating">{renderStars(testimonial.rating)}</div>
+                  <div className="testimonial-author">
+                    <h4>{testimonial.name}</h4>
+                    <p className="company">{testimonial.company}</p>
+                    <p className="location">📍 {testimonial.location}</p>
+                  </div>
+                  <p className="testimonial-text">"{testimonial.text}"</p>
+                </div>
               </div>
             </div>
           ))}

@@ -4,6 +4,7 @@ import goodsImage from '../assets/goods.png'
 import heavyImage from '../assets/heavy.png'
 import industrialImage from '../assets/industrailequipments.png'
 import panIndiaImage from '../assets/panindia.png'
+import houseImage from '../assets/householding.png'
 import './styles/Services.css'
 
 export default function Services() {
@@ -43,6 +44,12 @@ export default function Services() {
       icon: <img src={panIndiaImage} alt="Pan India Network" />,
       title: 'Pan India Network',
       description: 'Extensive network covering all major cities, towns and villages across India'
+    },
+    {
+      id: 7,
+      icon: <img src={houseImage} alt="Household Shifting" />,
+      title: 'Household Shifting',
+      description: 'Complete household relocation services with professional packing, loading, and unpacking for stress-free moving'
     }
   ]
 
