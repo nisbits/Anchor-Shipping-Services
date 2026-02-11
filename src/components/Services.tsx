@@ -5,6 +5,7 @@ import heavyImage from '../assets/heavy.png'
 import industrialImage from '../assets/industrailequipments.png'
 import panIndiaImage from '../assets/panindia.png'
 import houseImage from '../assets/householding.png'
+import localShiftingImage from '../assets/localshifting.png'
 import './styles/Services.css'
 
 export default function Services() {
@@ -53,7 +54,7 @@ export default function Services() {
     },
     {
       id: 8,
-      icon: <img src={goodsImage} alt="Local Shifting" />,
+      icon: <img src={localShiftingImage} alt="Local Shifting" />,
       title: 'Local Shifting',
       description: 'Quick and reliable local shifting services within city limits with affordable pricing and timely delivery'
     }
