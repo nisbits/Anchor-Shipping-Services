@@ -15,10 +15,10 @@ function App() {
       <Header />
       <Hero />
       <Services />
+      <Gallery />
       <WhyChooseUs />
       <Testimonials />
       <Map />
-      <Gallery />
       <Footer />
       <FloatingCallButton />
     </div>
