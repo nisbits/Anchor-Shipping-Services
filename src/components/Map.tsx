@@ -9,7 +9,7 @@ export default function Map() {
         <div className="map-container">
           <iframe
             // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95592341546572!3d-37.816279927758206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf00ef62049ee30!2s123%20Main%20Street%2C%20Melbourne%2C%20VIC%203000!5e0!3m2!1sen!2sau!4v1623052800000"
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2729.942639425732!2d77.05379680747087!3d28.498268448829375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1soffice%20no%2022%2C%20carterpuri%20road%20transport%20area%20sector%2018%20gurugram!5e0!3m2!1sen!2sin!4v1771604902786!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3506.2357547763822!2d77.05086897549606!3d28.502553875735916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMwJzA5LjIiTiA3N8KwMDMnMTIuNCJF!5e0!3m2!1sen!2sin!4v1771935150061!5m2!1sen!2sin"
             width="100%"
             height="400"
             style={{ border: 0, borderRadius: '8px' }}
@@ -30,3 +30,4 @@ export default function Map() {
     </section>
   )
 }
+
