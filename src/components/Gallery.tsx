@@ -26,6 +26,7 @@ export default function Gallery() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const galleryRef = useRef<HTMLDivElement>(null)
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
 
   const imageMedia: GalleryMedia[] = [
     {
@@ -120,6 +121,29 @@ export default function Gallery() {
     }
   }
 
+  useEffect(() => {
+    videoRefs.current.forEach((videoElement, index) => {
+      if (!videoElement) {
+        return
+      }
+
+      const isActiveVideo = index === currentImageIndex && galleryImages[index]?.type === 'video'
+
+      if (isActiveVideo) {
+        const playPromise = videoElement.play()
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Ignore autoplay interruptions by the browser
+          })
+        }
+        return
+      }
+
+      videoElement.pause()
+      videoElement.currentTime = 0
+    })
+  }, [currentImageIndex, galleryImages])
+
   const nextImage = () => {
     if (isTransitioning) return
     setIsTransitioning(true)
@@ -199,6 +223,13 @@ export default function Gallery() {
       galleryElement.removeEventListener('mousemove', handleMove)
       galleryElement.removeEventListener('mouseup', handleEnd)
       galleryElement.removeEventListener('mouseleave', handleEnd)
+
+      videoRefs.current.forEach((videoElement) => {
+        if (!videoElement) {
+          return
+        }
+        videoElement.pause()
+      })
     }
   }, [isTransitioning])
 
@@ -214,13 +245,15 @@ export default function Gallery() {
               className="gallery-track"
               style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
             >
-              {galleryImages.map((image) => (
+              {galleryImages.map((image, index) => (
                 <div key={image.id} className="gallery-item">
                   {image.type === 'video' ? (
                     <video
+                      ref={(element) => {
+                        videoRefs.current[index] = element
+                      }}
                       src={image.src}
                       className="gallery-media gallery-video"
-                      autoPlay
                       loop
                       controls
                       muted
